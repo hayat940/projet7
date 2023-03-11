@@ -55,7 +55,7 @@ const DivProprietaire = styled.div`
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    border: solid 1px red;   
+   
     @media (min-width: 768px) {
         width: 30%;
         flex-direction: column;
@@ -66,14 +66,14 @@ const DivIdentite = styled.div`
     align-items: center;
     justify-content: flex-end;
     text-align: right;
-    border: solid 1px red;
+    
     width: 100%;
     font-size: 18px;
     img {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        border: solid 1px red;
+     
         background-color: #c4c4c4;
         margin-left: 10px;
     }
