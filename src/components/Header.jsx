@@ -20,7 +20,10 @@ const Head = Styled.header `
             font-weight: 500;
             font-size: 12px;
             text-transform: uppercase;  
-            text-decoration-line: underline;
+   
+        }
+        a.active {
+            text-decoration: underline;
         }
     }
     

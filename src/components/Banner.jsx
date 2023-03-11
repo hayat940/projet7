@@ -17,18 +17,20 @@ const Contenu = Styled.div`
     font-size: 24px;
     justify-content: flex-start;
     border-radius: 10px;
-    line-height: 100%;
-    margin-top: 10px;
+    line-height: 24px;
     padding: 0 10px;
 
     /* desktop */
     @media (min-width: 768px) {
+        br{
+            display: none;
+        };
         height: 223px;
         font-size: 48px;
         justify-content: center;
         border-radius: 25px;
-        line-height: 142.6%;
-        margin-top: 40px;
+        line-height: 68px;
+        margin-top: 60px;
         padding: 0;
     }
 `;

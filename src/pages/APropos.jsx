@@ -9,6 +9,7 @@ const DivAPropos = styled.div`
     max-width: 1023px;
     margin: 0 auto;
     padding-bottom: 30px;
+    
 `;
 
 

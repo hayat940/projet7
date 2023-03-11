@@ -6,13 +6,16 @@ import Styled from "styled-components";
 
 const SectionLocations = Styled.section`
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    @media (max-width: 768px) {
+    justify-content: space-between;
+    flex-wrap: wrap ;
+    row-gap: 20px;
+    margin-top: 20px;
+    @media (min-width: 768px) {
         background: #F7F7F7;
         border-radius: 25px;
-        padding: 50px;
+        padding: 56px 50px;
         margin-top: 40px;
+        row-gap: 40px;
     }
 `;
 

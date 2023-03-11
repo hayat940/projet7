@@ -12,6 +12,15 @@ const CarrouselDiv = Styled.div `
         margin-top:40px;
     }
 `
+
+const CarrouselItem = Styled.div `
+    width: 100%;
+    height:225px;
+    border-radius:25px;
+    @media (min-width: 768px) {
+       height:450px;
+    }
+`
 const CarrouselImage = Styled.img `
     width: 100%;
     height:225px;
@@ -21,6 +30,20 @@ const CarrouselImage = Styled.img `
        height:450px;
     }
 `
+const CarrouselCaption = Styled.p `
+    width: 100%;
+    position:absolute;
+    bottom:20px;
+    color: #ffffff;
+    text-align: center;
+    display:none;
+    @media (min-width: 768px) {
+      display:block;
+      
+
+    }
+`
+
 const CarrouselControles = Styled.div `
     display:flex;
     justify-content: center;
@@ -66,7 +89,11 @@ function Carrousel({pictures}) {
                     return (
                         <div key={index}>
                             {index === courante &&
-                            <CarrouselImage src={p} alt='Image logement'/>}
+                                <CarrouselItem >
+                                    <CarrouselImage src={p} alt='Image logement'/>
+                                    <CarrouselCaption>{index + 1} / {nbImages}</CarrouselCaption>
+                                </CarrouselItem>
+                            }
                         </div>
                     );
                 })}
