@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import logements  from '../datas/logements.json';
+
 import Styled from 'styled-components';
 
 const CardLink = Styled(Link)`
@@ -26,12 +28,30 @@ const CardLink = Styled(Link)`
 	}
 `;
 
+// function Card({ titre, cover, id }) {
+// 	return (
+// 		<CardLink to={`./fiche-logement/${id}`} cover={cover} >
+// 			{titre}
+// 		</CardLink>
+// 	) if(){id}
+// }
+
 function Card({ titre, cover, id }) {
-	return (
-		<CardLink to={`./fiche-logement/${id}`} cover={cover} >
-			{titre}
-		</CardLink>
-	)
-}
+    const history = link();
+  
+    // Vérifier si l'ID de l'appartement est valide
+    const isIdValid = (id) => {
+      return logements.some((logement) => logement.id === id);
+    };
+  
+    // Créer le lien vers la fiche du logement
+    const link = isIdValid(id) ? `./fiche-logement/${id}` : '/Erreur404';
+  
+    // return (
+    //   <CardLink to={link} cover={cover}>
+    //     {titre}
+    //   </CardLink>
+    // );
+  }
 
 export default Card
