@@ -29,7 +29,7 @@ const CarrouselImage = Styled.img `
     @media (min-width: 768px) {
        height:450px;
     }
-
+`
 const CarrouselCaption = Styled.p `
     width: 100%;
     position:absolute;
