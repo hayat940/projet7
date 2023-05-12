@@ -32,14 +32,13 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: #ff6060;
   }
-
-
-  
-  a:hover {
+ a:hover {
     text-decoration: underline;
   }
 
 `;
+
+
 
 const Page = Styled.div`
   background-color: #ffffff;
