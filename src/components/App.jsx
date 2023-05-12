@@ -32,6 +32,8 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: #ff6060;
   }
+
+  
  a:hover {
     text-decoration: underline;
   }
