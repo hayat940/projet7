@@ -8,7 +8,7 @@ const DivScore = Styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-     border: solid 1px ;
+   
     width: 100%;
     @media (min-width: 768px) {
         justify-content: flex-end;

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Carrousel from "../components/Carrousel";
 import Accordion from "../components/Accordion";
 import logements from "../datas/logements.json";
+import Erreur404 from "./Erreur404";
 import Score from "../components/Score";
 
 import styled from "styled-components";
@@ -10,7 +11,7 @@ const DivLogement = styled.div`
 
     display: flex;
     flex-direction: column; 
-
+    
     h3 {
         font-size: 18px;
         font-weight: 500;
@@ -117,6 +118,9 @@ function FicheLogement() {
     //logement/df26rer  useParams
     const params = useParams();
     const logement = logements.find(logement => logement.id === params.id);
+    if (!logement) {
+        return <Erreur404 />;
+      }
 
     return (
         <div>
@@ -148,11 +152,11 @@ function FicheLogement() {
             <DivLogement>
 
                 <div className="logement_gauche">
-                    <Accordion titre={'Description'}>{logement.description}</Accordion>
+                    <Accordion title={"Description"}>{logement.description}</Accordion>
                 </div>
 
                 <div className="logement_droite">
-                    <Accordion titre={'Équipements'}>{logement.equipments.map((equipment, index) => (<dt key={index}>{equipment}</dt>))}</Accordion>
+                    <Accordion title={"Équipements"}>{logement.equipments.map((equipment, index) => (<dt key={index}>{equipment}</dt>))}</Accordion>
                 </div>
 
             </DivLogement>
