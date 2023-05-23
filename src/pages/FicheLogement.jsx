@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+
 import Carrousel from "../components/Carrousel";
 import Accordion from "../components/Accordion";
 import logements from "../datas/logements.json";
@@ -119,8 +120,8 @@ function FicheLogement() {
     const params = useParams();
     const logement = logements.find(logement => logement.id === params.id);
     if (!logement) {
-        return <Erreur404 />;
-      }
+        return <Erreur404/ >;
+    }
 
     return (
         <div>

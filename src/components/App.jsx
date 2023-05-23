@@ -56,7 +56,7 @@ const Page = Styled.div`
 function App() {
   return (
 
-
+    <>
       <Page>
         <GlobalStyle />
         <Header />
@@ -66,8 +66,10 @@ function App() {
           <Route path="/fiche-logement/:id" element={<FicheLogement/>} />
           <Route path="*" element={<Erreur404 />} />
         </Routes>
-        <Footer />
+
       </Page>
+      <Footer />
+    </> 
   );
 }
 
